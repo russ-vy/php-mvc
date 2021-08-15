@@ -1,0 +1,21 @@
+{% extends 'layouts/basic.twig' %}
+
+{% block title %}Сообщение{% endblock %}
+
+{% block head %}
+  {{ parent() }}
+  <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block body %}
+<div class='container'>
+
+    {% include 'components/header.twig' %}
+
+    {{ message }}
+      <br><br>
+
+    {% include 'components/footer.twig' %}
+
+</div>
+{% endblock %}

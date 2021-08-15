@@ -1,0 +1,42 @@
+{% extends 'layouts/basic.twig' %}
+
+{% block title %}Данные пользователя{% endblock %}
+
+{% block head %}
+  {{ parent() }}
+  <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block body %}
+  <body class="font-muli theme-cyan gradient">
+
+    <div class='container'>
+
+{#      {% include 'components/header.twig' %}#}
+
+      {% if user.id %}
+        <table style="border:1px solid black;">
+          <tr>
+            <td>ID</td>
+            <td>{{ user.id }}</td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>{{ user.login }}</td>
+          </tr>
+          <tr>
+            <td>id_role</td>
+            <td>{{ user.id_role }}</td>
+          </tr>
+        </table>
+      {% else %}
+        <b>Пользователь не найден</b>
+      {% endif %}
+      <br><br>
+
+      {% include 'components/footer.twig' %}
+
+    </div>
+
+  </body>
+{% endblock %}

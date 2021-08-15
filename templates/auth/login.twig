@@ -1,0 +1,50 @@
+{% extends 'layouts/basic.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+<body class="font-muli theme-cyan gradient">
+
+<div class="auth option2">
+    <div class="auth_left">
+        <form method="post" class="card" action="/login/">
+            <div class="card-body">
+                <div class="text-center">
+                    <a class="header-brand" href="index.html"><i class="fa fa-graduation-cap brand-logo"></i></a>
+                    <div class="card-title mt-3">Login to your account</div>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label"><a href="/forgot-password/" class="float-right small">I forgot password</a></label>
+                    <input type="password" name="passwd" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                    <input type="checkbox" name="remember" class="custom-control-input" />
+                    <span class="custom-control-label">Remember me</span>
+                    </label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block" title="">Sign in</button>
+                    <div class="text-muted mt-4">Don't have account yet? <a href="/register/">Sign up</a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Start Main project js, jQuery, Bootstrap -->
+<!--<script src="../assets/bundles/lib.vendor.bundle.js"></script>-->
+
+<!-- Start project main js  and page js -->
+<!--<script src="../assets/js/core.js"></script>-->
+</body>
+
+{% endblock %}
